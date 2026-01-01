@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 30px 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header h2 {
+    font-size: 3.2rem;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav li {
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav li:hover {
+    color: #9fff6b;
+}
+
+#cta-button {
+    border: 1px solid #9fff6b;
+    padding: 10px 28px;
+    border-radius: 30px;
+    color: #9fff6b;
+    transition: all 0.3s ease;
+}
+
+#cta-button:hover {
+    background-color: #9fff6b;
+    color: black;
+}
+
+/* ────────────────────────────────────────────────────────────── */
+/* HERO SECTION - Huge text UNDERNEATH the overlapping portrait   */
+/* ────────────────────────────────────────────────────────────── */
+
+.title {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+    text-align: center;
+    overflow: hidden;
+}
+
+.title > p {
+    position: relative;
+    top: 18vh;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50px;
+    background: rgba(255,255,255,0.04);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.title > p::before {
+    content: '●';
+    color: #12e23c;
+    font-size: 3.2rem;
+    margin-right: 4px;
+}
+
+.title h1 {
+    font-size: clamp(12rem, 18vw, 24rem);
+    font-weight: 900;
+    line-height: 0.82;
+    letter-spacing: -12px;
+    text-transform: uppercase;
+    margin: 250px 0 0 0;
+    position: relative;
+    z-index: 1;                   /* text stays behind */
+    color: #bef69f;
+    text-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+
+.title img {
+    width: clamp(380px, 52vw, 780px);
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    position: relative;
+    bottom: 8vh;
+    /* left: 50%;
+    transform: translateX(-50%);*/
+    z-index: 100;                  /*  ← image now clearly on top of text  */
+    mix-blend-mode: lighten;
+    filter: contrast(1.15) brightness(1.1) hue-rotate(15deg) saturate(1.4);
+    pointer-events: none;
+    margin-top: -80px;
+}
+
+/* Intro text (bottom left) */
+.intro {
+    position: absolute;
+    bottom: 10vh;
+    left: 8vw;
+    max-width: 520px;
+    z-index: 10;
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 30px 0;
+}
+
+.intro-text button {
+    background-color: #9fff6b;
+    color: black;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.intro-text button:hover {
+    background-color: #8dee58;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(159, 255, 107, 0.35);
+}
+
+footer {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+}
